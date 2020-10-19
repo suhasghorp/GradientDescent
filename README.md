@@ -25,7 +25,8 @@ or use [AAD](https://en.wikipedia.org/wiki/Automatic_differentiation) which will
 
 Finally, here are the test results for finding the minima of the three example functions. 
 
-As you can see, using AAD, you get a value much closer to zero when zero is the function munimum.
+As you can see, using AAD, you get a value much closer to zero when zero is the function minimum.
+
 
 <img src="https://github.com/suhasghorp/GradientDescent/raw/master/images/Test_Results.png" align="center" border="0">
 
