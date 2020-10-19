@@ -17,6 +17,10 @@ TEST_CASE("Testing Gradient Descent Algorithm", "[GradientDescent]"){
         std::pair< std::vector<double>, double> results = solver.optimize();
         double funcLoc = results.first[0];
         double funcVal = results.second;
+        std::cout << "f(x) = x ^2 " << std::endl;
+        std::cout << "Without AAD : Approximate Derivatives " << std::endl;
+        solver.printResults(results);
+        std::cout << "---------------------------------------" << std::endl;
         REQUIRE(funcLoc == Approx(0).margin(1e-3));
         REQUIRE(funcVal == Approx(0).margin(1e-3));
     }
@@ -32,6 +36,10 @@ TEST_CASE("Testing Gradient Descent Algorithm", "[GradientDescent]"){
         std::pair< std::vector<double>, double> results = solver.optimize();
         double funcLoc = results.first[0];
         double funcVal = results.second;
+        std::cout << "f(x) = x^2" << std::endl;
+        std::cout << "With AAD : Exact Derivatives " << std::endl;
+        solver.printResults(results);
+        std::cout << "---------------------------------------" << std::endl;
         REQUIRE(funcLoc == Approx(0).margin(1e-8));
         REQUIRE(funcVal == Approx(0).margin(1e-8));
     }
@@ -47,6 +55,10 @@ TEST_CASE("Testing Gradient Descent Algorithm", "[GradientDescent]"){
         std::pair< std::vector<double>, double> results = solver.optimize();
         double funcLoc = results.first[0];
         double funcVal = results.second;
+        std::cout << "f(x) = x^4 + 2x^3 - 6x^2 + 4x + 2" << std::endl;
+        std::cout << "Without AAD : Approximate Derivatives" << std::endl;
+        solver.printResults(results);
+        std::cout << "---------------------------------------" << std::endl;
         REQUIRE(funcLoc == Approx(-2.73257).margin(1e-3));
         REQUIRE(funcVal == Approx(-38.7846).margin(1e-3));
     }
@@ -62,6 +74,10 @@ TEST_CASE("Testing Gradient Descent Algorithm", "[GradientDescent]"){
         std::pair< std::vector<double>, double> results = solver.optimize();
         double funcLoc = results.first[0];
         double funcVal = results.second;
+        std::cout << "f(x) = x^4 + 2x^3 - 6x^2 + 4x + 2" << std::endl;
+        std::cout << "With AAD : Exact Derivatives " << std::endl;
+        solver.printResults(results);
+        std::cout << "---------------------------------------" << std::endl;
         REQUIRE(funcLoc == Approx(-2.73207).margin(1e-8));
         REQUIRE(funcVal == Approx(-38.7846).margin(1e-8));
     }
@@ -75,6 +91,10 @@ TEST_CASE("Testing Gradient Descent Algorithm", "[GradientDescent]"){
         solver.setMaxIterations(50);
         solver.setStepSize(0.1);
         std::pair< std::vector<double>, double> results = solver.optimize();
+        std::cout << "f(x,y) = x^2 + xy + y^2" << std::endl;
+        std::cout << "Without AAD : Approximate Derivatives" << std::endl;
+        solver.printResults(results);
+        std::cout << "---------------------------------------" << std::endl;
         for (double d : results.first) {
             REQUIRE(d == Approx(0).margin(1e-3));
         }
@@ -90,6 +110,10 @@ TEST_CASE("Testing Gradient Descent Algorithm", "[GradientDescent]"){
         solver.setMaxIterations(50);
         solver.setStepSize(0.1);
         std::pair< std::vector<double>, double> results = solver.optimize();
+        std::cout << "f(x,y) = x^2 + xy + y^2" << std::endl;
+        std::cout << "With AAD : Exact Derivatives" << std::endl;
+        solver.printResults(results);
+        std::cout << "---------------------------------------" << std::endl;
         for (double d : results.first) {
             REQUIRE(d == Approx(0).margin(1e-5));
         }
