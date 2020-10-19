@@ -20,7 +20,11 @@ where <img src="https://github.com/suhasghorp/GradientDescent/raw/master/images/
 To compute <img src="https://github.com/suhasghorp/GradientDescent/raw/master/images/7.png" align="center" border="0">, either use finite difference which will give you an approximate derivative of the function as follows : 
 <img src="https://github.com/suhasghorp/GradientDescent/raw/master/images/8.png" align="center" border="0">
 
-or use ![AAD](https://en.wikipedia.org/wiki/Automatic_differentiation)
+or use [AAD](https://en.wikipedia.org/wiki/Automatic_differentiation) which will give you exact derivatives.
+
+Finally, here are the test results for finding the minima of the three example functions:
+
+
 
 
 
