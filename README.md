@@ -8,3 +8,8 @@ For example, consider function <img src="https://bit.ly/1HR0GAY" align="center" 
 We know that analytically the first derivative is <img src="https://bit.ly/35c8FqD" align="center" border="0" alt=" f'(x) = 2x" width="87" height="21" />
 
 ![alt text](https://github.com/suhasghorp/GradientDescent/raw/master/src/fx2.png "f(x)=x^2")
+
+##Gradient Descent Equation
+
+
+Equation <img src="https://bit.ly/3dBFBgc" align="center" border="0" width="193" height="19" />
