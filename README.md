@@ -23,7 +23,8 @@ To compute <img src="https://github.com/suhasghorp/GradientDescent/raw/master/im
 
 or use [AAD](https://en.wikipedia.org/wiki/Automatic_differentiation) which will give you exact derivatives.
 
-Finally, here are the test results for finding the minima of the three example functions:
+Finally, here are the test results for finding the minima of the three example functions. 
+As you can see, using AAD, you get a value much closer to zero when zero is the function munimum.
 
 <img src="https://github.com/suhasghorp/GradientDescent/raw/master/images/Test_Results.png" align="center" border="0">
 
